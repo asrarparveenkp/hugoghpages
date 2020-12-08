@@ -5,7 +5,7 @@ jobs:
     runs-on: testgitrunner1
     steps:
       - name: "clone"
-        run: git clone git@github.com:asrarparveenkp/hugoghpages.git .
+        run: git clone git@github.com:asrarparveenkp/hugoghpages.git
         #uses: actions/checkout@v2
         #with:
         #  repository: asrarparveenkp/hugoghpages
