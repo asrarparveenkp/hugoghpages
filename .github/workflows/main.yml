@@ -10,5 +10,5 @@ jobs:
           repository: asrarparveenkp/hugoghpages
           path: hugoghpages
           ref: main
-          ssh-key: ${{ secrets.SSH_KEY }}
+        #  ssh-key: ${{ secrets.SSH_KEY }}
           persist-credentials: false
