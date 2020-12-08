@@ -8,8 +8,8 @@ jobs:
         run: git clone git@github.com:asrarparveenkp/hugoghpages.git updateBranch
       - name: 'git push'
         run: |
-          hugo -d "updateBranch"
           cd "updateBranch"
+          hugo
           ls -al
           git config core.autocrlf false
           git add ./
