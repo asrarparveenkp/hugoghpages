@@ -5,10 +5,11 @@ jobs:
     runs-on: testgitrunner1
     steps:
       - name: "clone"
-        uses: actions/checkout@v2
-        with:
-          repository: asrarparveenkp/hugoghpages
-          path: hugoghpages
-          ref: main
-        #  ssh-key: ${{ secrets.SSH_KEY }}
-          persist-credentials: false
+        run: git clone git@github.com:asrarparveenkp/hugoghpages.git .
+        #uses: actions/checkout@v2
+        #with:
+        #  repository: asrarparveenkp/hugoghpages
+        #  path: hugoghpages
+        #  ref: main
+          #ssh-key: ${{ secrets.SSH_KEY }}
+        #  persist-credentials: false
