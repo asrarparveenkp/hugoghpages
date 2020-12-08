@@ -10,10 +10,7 @@ jobs:
         run: |
           hugo -d "updateBranch"
           cd "updateBranch"
-        #  hugo
           ls -al
-        #  git config --global user.email "anshul.mittal@tesco.com"
-        #  git config --global user.name "asrarparveenkp"
           git config core.autocrlf false
           git add ./
           git commit --allow-empty -m "update document"
