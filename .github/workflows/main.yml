@@ -1,0 +1,31 @@
+name: HugotoGhpages
+on: [push]
+jobs:
+  build:
+    runs-on: testgitrunner1
+    steps:
+#      - name: Installs Hugo
+#        run: |
+#          wget --retry-connrefused --waitretry=1 --read-timeout=20 --timeout=15 -t 0 https://github.com/gohugoio/hugo/releases/download/v0.70.0/hugo_0.70.0_Linux-64bit.deb
+#          sudo dpkg -i hugo_0.70.0_Linux-64bit.deb
+#          ls -al
+      - name: "clone"
+        uses: actions/checkout@v2
+        with:
+          repository: CoreDevOpsTools/hugotoghpages
+          path: hugotoghpages
+          ref: main
+          ssh-key: ${{ secrets.SSH_KEY }}
+          persist-credentials: false
+#      - name: 'git push'
+#        run: |
+#          cd "updateBranch"
+#          hugo
+#          ls -al
+#          git config --global user.email "anshul.mittal@tesco.com"
+#          git config --global user.name "anshul-mittal-08"
+#          git config core.autocrlf false
+#          git add ./
+#          git commit --allow-empty -m "update document"
+#          git push
+ 
