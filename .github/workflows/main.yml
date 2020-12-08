@@ -8,12 +8,4 @@ jobs:
         run: |
           rm -fr *
           git clone git@github.com:asrarparveenkp/hugoghpages.git updateBranch
-      - name: 'git push'
-        run: |
-          cd "updateBranch"
-          hugo
-          ls -al
-          git config core.autocrlf false
-          git add ./
-          git commit --allow-empty -m "update document"
-          git push
+      
