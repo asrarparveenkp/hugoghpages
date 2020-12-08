@@ -5,7 +5,9 @@ jobs:
     runs-on: testgitrunner1
     steps:
       - name: "clone"
-        run: git clone git@github.com:asrarparveenkp/hugoghpages.git updateBranch
+        run: |
+          rm -fr *
+          git clone git@github.com:asrarparveenkp/hugoghpages.git updateBranch
       - name: 'git push'
         run: |
           cd "updateBranch"
